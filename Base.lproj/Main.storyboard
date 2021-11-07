@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-DA-ddX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWx-gd-POW">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Tqj-wo-HVr">
+                                        <connections>
+                                            <action selector="launchCamera:" destination="BYZ-38-t0r" id="LGF-nZ-Ut2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="boS-am-7w7"/>
+                                    <barButtonItem systemItem="action" id="faC-an-Vso">
+                                        <connections>
+                                            <action selector="Action:" destination="BYZ-38-t0r" id="dBD-mr-Ue7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qWx-gd-POW" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="IHw-5b-gyf"/>
+                            <constraint firstItem="m0e-DA-ddX" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="S1I-G3-fBZ"/>
+                            <constraint firstItem="m0e-DA-ddX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jGp-D7-hIS"/>
+                            <constraint firstAttribute="trailing" secondItem="m0e-DA-ddX" secondAttribute="trailing" id="nG4-ZR-6Nk"/>
+                            <constraint firstItem="m0e-DA-ddX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p7g-yX-Ksi"/>
+                            <constraint firstItem="m0e-DA-ddX" firstAttribute="trailing" secondItem="qWx-gd-POW" secondAttribute="trailing" id="rBp-eX-DiZ"/>
+                            <constraint firstItem="m0e-DA-ddX" firstAttribute="leading" secondItem="qWx-gd-POW" secondAttribute="leading" id="yts-cj-ozL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="m0e-DA-ddX" id="2e1-OQ-uuu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="155"/>
+        </scene>
+    </scenes>
+</document>
